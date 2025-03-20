@@ -11,13 +11,13 @@ arena_mg.c
 -added aditional checking to arena_expand_mg();
 
 minishell.h
-- # include "libft.h"
-- # include <linux/limits.h>
-- # include <limits.h>
+-  include "libft.h"
+-  include <linux/limits.h>
+-  include <limits.h>
 
-- # ifndef SIZE_MAX
-- # define SIZE_MAX ((size_t)-1)
-- # endif
+-  ifndef SIZE_MAX
+-  define SIZE_MAX ((size_t)-1)
+-  endif
 
 - manually defined SIZE_MAX bcs limits.h and    linux/limits.h seams doesnt work : 
 
