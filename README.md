@@ -1,14 +1,23 @@
-ast.h
+builin.c
+- do_cd()
+- cd_change_dir() //called from do_cd
+- do_pwd()
 
-added NODE_BUILTIN for CMD that should execute from parrent process not execve or fork(), (echo, cd, pwd, export, unset, env, exit)
+libft
+-added strcmp.c
 
-ast.c
+arena_mg.c
+-added aditional checking to arena_expand_mg();
 
-NODE_BUILTIN in case switch, func: node_type_to_str();
+minishell.h
+- # include "libft.h"
+- # include <linux/limits.h>
+- # include <limits.h>
 
-exec_engine.c
+- # ifndef SIZE_MAX
+- # define SIZE_MAX ((size_t)-1)
+- # endif
 
-int execute_builtin(t_ast_node *node, int in_fd, int out_fd, int *last_status);
+- manually defined SIZE_MAX bcs limits.h and    linux/limits.h seams doesnt work : 
 
-	case NODE_BUILTIN:
-			return execute_builtin()
+- added colors.h //include in minishell.h

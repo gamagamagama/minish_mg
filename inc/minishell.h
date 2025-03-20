@@ -3,23 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matus <matus@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 20:48:22 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/17 13:40:21 by matus            ###   ########.fr       */
+/*   Updated: 2025/03/19 13:59:29 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
+#ifndef SIZE_MAX
+# define SIZE_MAX ((size_t)-1)
+#endif
+
 # include "arena.h"
 # include "ast.h"
 # include "tokenizer.h"
 # include "env_var.h"
+# include "colors.h"
 
 # include "libft.h"
-
+# include <linux/limits.h>
+# include <limits.h>
 
 # include <unistd.h>
 # include <stdio.h>
@@ -29,7 +35,8 @@
 # include <fcntl.h>
 # include <readline/readline.h>
 # include <readline/history.h>
-# include <limits.h>
+
+
 
 t_arena		*arena_init(size_t size);
 void		*arena_malloc(t_arena *arena, size_t size);

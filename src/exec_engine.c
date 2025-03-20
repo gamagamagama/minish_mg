@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec_engine.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matus <matus@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 08:34:17 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/17 06:52:55 by matus            ###   ########.fr       */
+/*   Updated: 2025/03/20 02:19:03 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int execute_redirections(t_ast_node *node, int in_fd, int out_fd, int *last_stat
 int execute_logical_op(t_ast_node *node, int in_fd, int out_fd, int *last_status);
 int execute_group(t_ast_node *node, int in_fd, int out_fd, int *last_status);
 
-int execute_builtin(t_ast_node *node, int in_fd, int out_fd, int *last_status);
+
 
 char **get_env_array(void); // You'll need to implement this based on your environment variables
 
@@ -32,8 +32,6 @@ int execute_node(t_ast_node *node, int in_fd, int out_fd, int *last_status) {
     if (!node)
         return 0;
     switch (node->type) {
-		case NODE_BUILTIN:
-			return execute_builtin(node, in_fd, out_fd, last_status);
         case NODE_CMD:
             return execute_command(node, in_fd, out_fd);
         case NODE_PIPE:

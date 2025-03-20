@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ast.h                                              :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:35:58 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/20 02:14:09 by mgavorni         ###   ########.fr       */
+/*   Created: 2025/03/18 17:38:50 by mgavorni          #+#    #+#             */
+/*   Updated: 2025/03/18 17:59:01 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AST_H
-# define AST_H
+#include "../inc/libft.h"
 
-typedef enum e_node_type {
-	NODE_CMD,
-	NODE_PIPE,
-	NODE_REDIR_IN,
-	NODE_REDIR_OUT,
-	NODE_REDIR_APPEND,
-	NODE_HEREDOC,
-	NODE_AND,
-	NODE_OR,
-	NODE_GROUP,
-} t_node_type;
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	size_t	i;
 
-typedef struct s_ast_node {
-	t_node_type type;
-	char **args;
-	struct s_ast_node *left;
-	struct s_ast_node *right;
-} t_ast_node;
-
-
-#endif
+	i = 0;
+	while ((s1[i]) && (s1[i] == s2[i]))
+	{
+		i++;
+	}
+	return (((unsigned char)s1[i]) - ((unsigned char)s2[i]));
+}

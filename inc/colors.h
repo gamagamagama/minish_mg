@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ast.h                                              :+:      :+:    :+:   */
+/*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:35:58 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/20 02:14:09 by mgavorni         ###   ########.fr       */
+/*   Created: 2025/03/19 13:58:24 by mgavorni          #+#    #+#             */
+/*   Updated: 2025/03/19 16:42:54 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AST_H
-# define AST_H
-
-typedef enum e_node_type {
-	NODE_CMD,
-	NODE_PIPE,
-	NODE_REDIR_IN,
-	NODE_REDIR_OUT,
-	NODE_REDIR_APPEND,
-	NODE_HEREDOC,
-	NODE_AND,
-	NODE_OR,
-	NODE_GROUP,
-} t_node_type;
-
-typedef struct s_ast_node {
-	t_node_type type;
-	char **args;
-	struct s_ast_node *left;
-	struct s_ast_node *right;
-} t_ast_node;
+#ifndef COLORS_H
+#define COLORS_H
 
 
-#endif
+#define PURPLE	"\033[38;5;141m"
+#define GREEN	"\033[38;5;46m"
+#define RED		"\033[0;31m"
+#define GREY	"\033[38;5;240m"
+#define YELLOW  "\x1b[33m"
+#define BLUE    "\x1b[34m"
+
+#define RESET	"\033[0m"
+#define BOLD	"\033[1m"
+#define CLEAR	"\r\033[K"
+
+#endif 

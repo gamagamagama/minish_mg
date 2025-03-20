@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ast.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matus <matus@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:02:13 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/17 05:55:44 by matus            ###   ########.fr       */
+/*   Updated: 2025/03/20 02:15:51 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,6 @@ t_ast_node *parse(t_tokenizer_data *tok_data) {
 // Function to get string representation of node types
 const char *node_type_to_str(t_node_type type) {
     switch (type) {
-        case NODE_BUILTIN: return "BUILTIN"; 
         case NODE_CMD: return "CMD";
         case NODE_PIPE: return "PIPE";
         case NODE_REDIR_IN: return "REDIR_IN";
