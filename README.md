@@ -2,6 +2,7 @@ builin.c
 - do_cd()
 - cd_change_dir() //called from do_cd
 - do_pwd()
+- do_echo() //testing needed
 
 libft
 -added strcmp.c
@@ -21,3 +22,5 @@ minishell.h
 - manually defined SIZE_MAX bcs limits.h and    linux/limits.h seams doesnt work : 
 
 - added colors.h //include in minishell.h
+
+signal.h // added for handling signals

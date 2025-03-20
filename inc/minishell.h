@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 20:48:22 by vnicoles          #+#    #+#             */
-/*   Updated: 2025/03/19 13:59:29 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/03/20 15:42:05 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include "tokenizer.h"
 # include "env_var.h"
 # include "colors.h"
+# include "signal.h"
 
 # include "libft.h"
 # include <linux/limits.h>
