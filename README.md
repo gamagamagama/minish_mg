@@ -5,10 +5,10 @@
 - do_echo() //testing needed
 
 # libft
--added strcmp.c
+- added strcmp.c
 
 # arena_mg.c
--added aditional checking to arena_expand_mg();
+- added aditional checking to arena_expand_mg();
 
 # minishell.h
 
