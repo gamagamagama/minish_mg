@@ -26,5 +26,8 @@
 # colors.h 
 - include in minishell.h
 
-# signal.h 
+# sig_hand.h 
 - added for handling signals
+
+# src/signals.c
+- setup_sig_handler()
