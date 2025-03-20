@@ -1,5 +1,11 @@
 #include "../inc/minishell.h"
+#include "../inc/env_var.h"
 #include <linux/limits.h>
+
+typedef struct s_env
+{
+    void *all;
+}t_env;
 
 void do_pwd(void)
 {
@@ -69,7 +75,33 @@ void do_cd(t_env *env, char *path)
  
 }
 
-//test main
+void do_echo(t_env *env, t_ast_node **argv)
+{
+    int is_flag;
+    int i;
+    
+    i = 0;
+    is_flag = 0;
+    if((*argv)->args[i] && ft_strcmp((*argv)->args[i], "-n") == 0)
+    {
+        is_flag = 1;
+        i++;
+    }
+    while((*argv)->args[i])
+    {
+        printf("%s", (*argv)->args[i]);
+        if ((*argv)->args[i + 1])
+        {
+            printf(" ");
+        }
+        i++;
+    }
+    if(!is_flag)
+        printf("\n");
+
+}
+
+
 
 // int main()
 // {
